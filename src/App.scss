@@ -13,7 +13,7 @@ $primary2: #9396e1;
 $secondary: #f6bbbb;
 
 nav {
-    height: 7.0vh;
+    height: 7vh;
     background: white;
     display: flex;
     div {
@@ -56,8 +56,8 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    .flex-landing {
-
+    .ui.text.container {
+        max-width: 500px;
     }
 }
 #about {
@@ -100,7 +100,7 @@ nav {
 #footer {
     margin-top: 7vh;
     height: 40vh;
-    background: #5C36A9;
+    background: #5c36a9;
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -12,7 +12,7 @@ const panes = [
                 <Grid.Row>
                     <Grid.Column>
                         <Card color='violet' href='#' target="_blank">
-                            <Image src={placeholder} />
+                            <Image src={placeholder}/>
                             <Card.Header>Header</Card.Header>
                             <Card.Meta>Meta</Card.Meta>
                             <Card.Description>

@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-    Icon,
     Container,
     Button,
     Image,
@@ -11,14 +10,15 @@ import teamLab from '../Assets/teamlab.png'
 const Landing = () => {
     return (
         <section id='landing'>
-            <div className="flex-landing">
-                <Container text>
-                    <p>Hello!</p>
-                    <p>I'm Kei Hartley, a software engineer.</p>
-                    <p>Specialized in web dev and data visualization</p>
-                </Container>
-                <div>
 
+            <Container text>
+                Hello!
+                <br/>
+                I'm Kei Hartley, a software engineer.
+                <br/>
+                Specialized in web dev and data visualization
+                <div>
+                    <Divider/>
                     <Button content='Resume'
                         icon={
                             {
@@ -36,9 +36,7 @@ const Landing = () => {
                         }/>
 
                 </div>
-            </div>
-
-
+            </Container>
             <Image src={teamLab}
                 initial={
                     {x: 100}
