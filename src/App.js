@@ -1,28 +1,29 @@
 import Nav from "./Components/Nav/Nav";
 import "./App.scss"
-import teamLab from './Assets/teamlab.png'
+import 'semantic-ui-css/semantic.min.css'
+import React, {createRef} from 'react';
+import Skills from "./Pages/Skills";
+import AboutMe from "./Pages/AboutMe";
+import Landing from "./Pages/Landing";
+import Portfolio from "./Pages/Portfolio";
+import {BrowserRouter as Router} from 'react-router-dom'
+import Footer from "./Pages/Footer";
 
 function App() {
-    return (<div className="App">
-        <Nav/>
-        <div className='body'>
-            <div>
-                <p>Hello!</p>
-                <p>I'm Kei Hartley, a software engineer.</p>
-                <p>Specialized in web dev and data visualization</p>
-                <div>
-                    <button>
-                        Resume
-                    </button>
-                    <button>
-                        Cover Letter
-                    </button>
-                </div>
+    const contextRef = createRef()
+    return (
+        <Router>
+            <div className="App"
+                ref={contextRef}>
+                <Nav contextRef={contextRef}/>
+                <Landing/>
+                <AboutMe/>
+                <Skills/>
+                <Portfolio/>
+                <Footer/>
             </div>
-            <img src={teamLab}
-                alt='teamLab'/>
-        </div>
-    </div>);
+        </Router>
+    );
 }
 
 export default App;
