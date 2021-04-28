@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-    Container,
-    Button,
-    Image,
-    Divider
-} from "semantic-ui-react";
+import {Container, Button, Image, Divider} from "semantic-ui-react";
 import teamLab from '../Assets/teamlab.png'
 
 const Landing = () => {

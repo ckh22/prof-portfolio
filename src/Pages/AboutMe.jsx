@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-    Header,
-    Image,
-    Segment,
-    Container
-} from "semantic-ui-react";
+import {Header, Image, Segment, Container} from "semantic-ui-react";
 import osaka from '../Assets/OSAKA.png'
 
 const AboutMe = () => {
