@@ -16,18 +16,14 @@ const Landing = () => {
                     <Divider/>
                     <Button content='Resume'
                         icon={
-                            {
-                                color: 'white',
-                                name: 'download'
-                            }
+                            {name: 'download'}
+
                         }/>
 
                     <Button content='Cover Letter'
                         icon={
-                            {
-                                color: 'white',
-                                name: 'download'
-                            }
+                            {name: 'download'}
+
                         }/>
 
                 </div>

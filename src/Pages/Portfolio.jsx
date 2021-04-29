@@ -154,7 +154,6 @@ const panes = [
 ]
 
 const Portfolio = () => {
-    console.log(panes)
     return (
         <section id='portfolio'>
             <Tab panes={panes}/>
