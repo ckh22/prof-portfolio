@@ -1,7 +1,19 @@
 import React from 'react'
-import {Modal, Button, Form} from 'semantic-ui-react'
+import {
+    Modal,
+    Button,
+    Form,
+    TextArea,
+    Divider
+} from 'semantic-ui-react'
+import {NetlifyForm, Honeypot} from 'react-netlify-forms'
 
 const ContactModal = ({open, setOpen}) => {
+
+    function closer(e) {
+        setOpen(!open)
+        console.log(e)
+    }
     return (
         <Modal onClose={
                 () => setOpen(false)
@@ -19,21 +31,34 @@ const ContactModal = ({open, setOpen}) => {
             <Modal.Header>Select a Photo</Modal.Header>
             <Modal.Content>
 
-                <Form style={
-                    {padding: '3em'}
-                }>
-                    <Form.Group unstackable
-                        widths={2}>
-                        <Form.Input label='First name' placeholder='First name'/>
-                        <Form.Input label='Last name' placeholder='Last name'/>
-                    </Form.Group>
-                    <Form.Group widths={2}>
-                        <Form.Input label='Address' placeholder='Address'/>
-                        <Form.Input label='Phone' placeholder='Phone'/>
-                    </Form.Group>
-                    <Form.Checkbox label='I agree to the Terms and Conditions'/>
-                    <Button type='submit' color='brown' floated='right'>Submit</Button>
-                </Form>
+                <NetlifyForm name='Contact' action='/thanks' honeypotName='bot-field'>
+                    {
+                    ({handleChange, success, error}) => (
+                        <>
+                            <Honeypot/> {
+                            success && <p>Thanks for contacting us!</p>
+                        }
+                            {
+                            error && (
+                                <p>Sorry, we could not reach our servers. Please try again later.</p>
+                            )
+                        }
+                            <div>
+                                <label htmlFor='name'>Name:</label>
+                                <input type='text' name='name' id='name'
+                                    onChange={handleChange}/>
+                            </div>
+                            <div>
+                                <label htmlFor='message'>Message:</label>
+                                <textarea type='text' name='message' id='message' rows='4'
+                                    onChange={handleChange}/>
+                            </div>
+                            <div>
+                                <button type='submit'>Submit</button>
+                            </div>
+                        </>
+                    )
+                } </NetlifyForm>
             </Modal.Content>
         </Modal>
     )
