@@ -1,19 +1,11 @@
 import React from 'react'
 import {
     Modal,
-    Button,
-    Form,
-    TextArea,
-    Divider
+    Button
 } from 'semantic-ui-react'
 import {NetlifyForm, Honeypot} from 'react-netlify-forms'
 
 const ContactModal = ({open, setOpen}) => {
-
-    function closer(e) {
-        setOpen(!open)
-        console.log(e)
-    }
     return (
         <Modal onClose={
                 () => setOpen(false)
