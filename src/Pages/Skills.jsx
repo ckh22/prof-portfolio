@@ -15,7 +15,6 @@ const Skills = () => {
             <Segment>
                 <Container text textAlign='center'>
                     <Header content='Skills' as='h2'/>
-                    <Header content="I am confident in ..." as='h3'/>
                 </Container>
             </Segment>
             <Grid columns={3}

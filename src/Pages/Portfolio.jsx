@@ -1,162 +1,41 @@
-import React from 'react'
-import {Grid, Tab, Image, Card} from 'semantic-ui-react'
-import placeholder from '../Assets/image.png'
+import React, {useState} from 'react'
+import {
+    Container,
+    Button
+} from 'semantic-ui-react'
 
-const panes = [
-    {
-        menuItem: 'Data Science',
-        render: () => <Tab.Pane>
-            <Grid verticalAlign='middle'
-                columns={4}
-                centered>
-                <Grid.Row>
-                    <Grid.Column>
-                        <Card color='violet' href='#' target="_blank">
-                            <Image src={placeholder}/>
-                            <Card.Header>Header</Card.Header>
-                            <Card.Meta>Meta</Card.Meta>
-                            <Card.Description>
-                                <p>Description</p>
-                            </Card.Description>
-                        </Card>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <Card color='violet' href='#' target="_blank">
-                            <Image src={placeholder}/>
-                            <Card.Header>Header</Card.Header>
-                            <Card.Meta>Meta</Card.Meta>
-                            <Card.Description>
-                                <p>Description</p>
-                            </Card.Description>
-                        </Card>
-                        <br/>
-                        <Card color='violet' href='#' target="_blank">
-                            <Image src={placeholder}/>
-                            <Card.Header>Header</Card.Header>
-                            <Card.Meta>Meta</Card.Meta>
-                            <Card.Description>
-                                <p>Description</p>
-                            </Card.Description>
-                        </Card>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <Card color='violet' href='#' target="_blank">
-                            <Image src={placeholder}/>
-                            <Card.Header>Header</Card.Header>
-                            <Card.Meta>Meta</Card.Meta>
-                            <Card.Description>
-                                <p>Description</p>
-                            </Card.Description>
-                        </Card>
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
-        </Tab.Pane>
-    }, {
-        menuItem: 'Web Design',
-        render: () => <Tab.Pane>
-            <Grid verticalAlign='middle'
-                columns={4}
-                centered>
-                <Grid.Row>
-                    <Grid.Column>
-                        <Card color='violet' href='#' target="_blank">
-                            <Image src={placeholder}/>
-                            <Card.Header>Header</Card.Header>
-                            <Card.Meta>Meta</Card.Meta>
-                            <Card.Description>
-                                <p>Description</p>
-                            </Card.Description>
-                        </Card>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <Card color='violet' href='#' target="_blank">
-                            <Image src={placeholder}/>
-                            <Card.Header>Header</Card.Header>
-                            <Card.Meta>Meta</Card.Meta>
-                            <Card.Description>
-                                <p>Description</p>
-                            </Card.Description>
-                        </Card>
-                        <br/>
-                        <Card color='violet' href='#' target="_blank">
-                            <Image src={placeholder}/>
-                            <Card.Header>Header</Card.Header>
-                            <Card.Meta>Meta</Card.Meta>
-                            <Card.Description>
-                                <p>Description</p>
-                            </Card.Description>
-                        </Card>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <Card color='violet' href='#' target="_blank">
-                            <Image src={placeholder}/>
-                            <Card.Header>Header</Card.Header>
-                            <Card.Meta>Meta</Card.Meta>
-                            <Card.Description>
-                                <p>Description</p>
-                            </Card.Description>
-                        </Card>
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
-        </Tab.Pane>
-    }, {
-        menuItem: 'User Design',
-        render: () => <Tab.Pane>
-            <Grid verticalAlign='middle'
-                columns={4}
-                centered>
-                <Grid.Row>
-                    <Grid.Column>
-                        <Card color='violet' href='#' target="_blank">
-                            <Image src={placeholder}/>
-                            <Card.Header>Header</Card.Header>
-                            <Card.Meta>Meta</Card.Meta>
-                            <Card.Description>
-                                <p>Description</p>
-                            </Card.Description>
-                        </Card>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <Card color='violet' href='#' target="_blank">
-                            <Image src={placeholder}/>
-                            <Card.Header>Header</Card.Header>
-                            <Card.Meta>Meta</Card.Meta>
-                            <Card.Description>
-                                <p>Description</p>
-                            </Card.Description>
-                        </Card>
-                        <br/>
-                        <Card color='violet' href='#' target="_blank">
-                            <Image src={placeholder}/>
-                            <Card.Header>Header</Card.Header>
-                            <Card.Meta>Meta</Card.Meta>
-                            <Card.Description>
-                                <p>Description</p>
-                            </Card.Description>
-                        </Card>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <Card color='violet' href='#' target="_blank">
-                            <Image src={placeholder}/>
-                            <Card.Header>Header</Card.Header>
-                            <Card.Meta>Meta</Card.Meta>
-                            <Card.Description>
-                                <p>Description</p>
-                            </Card.Description>
-                        </Card>
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
-        </Tab.Pane>
-    },
-]
 
 const Portfolio = () => {
+    const types = ['web', 'user', 'data']
+    const [active, setActive] = useState(types[1])
     return (
         <section id='portfolio'>
-            <Tab panes={panes}/>
+            <div> {
+                types.map(type => (
+                    <Button content={type}
+                        circular
+                        color={
+                            active === type ? 'purple' : null
+                        }
+                        key={type}
+                        active={
+                            active === type
+                        }
+                        onClick={
+                            () => setActive(type)
+                        }/>
+                ))
+            }
+                {
+                active === 'data' && <div>data</div>
+            }
+                {
+                active === 'user' && <div>user</div>
+            }
+                {
+                active === 'web' && <div>web</div>
+            } </div>
+
         </section>
     )
 }
