@@ -1,6 +1,5 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import {
-    Container,
     Button
 } from 'semantic-ui-react'
 
@@ -23,18 +22,19 @@ const Portfolio = () => {
                         }
                         onClick={
                             () => setActive(type)
-                        }/>
+                        } />
                 ))
             }
-                {
+            </div>
+            {
                 active === 'data' && <div>data</div>
             }
-                {
+            {
                 active === 'user' && <div>user</div>
             }
-                {
+            {
                 active === 'web' && <div>web</div>
-            } </div>
+            }
 
         </section>
     )
