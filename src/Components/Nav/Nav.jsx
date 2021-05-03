@@ -8,7 +8,6 @@ const Nav = () => {
     const initialNavbar = {
         height: '7vh',
         background: 'white',
-        position: '-webkit - sticky',
         position: 'sticky',
         top: 0,
         display: 'flex',
@@ -21,7 +20,6 @@ const Nav = () => {
         height: '7vh',
         background: '#5c36a9',
         color: 'white',
-        position: '-webkit - sticky',
         position: 'sticky',
         top: 0,
         display: 'flex',
