@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Button, Image, Divider} from "semantic-ui-react";
+import {Container, Button, Image, Divider, Header} from "semantic-ui-react";
 import teamLab from '../Assets/teamlab.png'
 
 const Landing = () => {
@@ -7,20 +7,18 @@ const Landing = () => {
         <section id='landing'>
 
             <Container text>
-                Hello!
-                <br/>
-                I'm Kei Hartley, a software engineer.
-                <br/>
-                Specialized in web dev and data visualization
+                <Header content='Hello! My name is Kei' />
+                <p>I'm Kei Hartley, a software engineer.</p>
+                <p>Specialized in web dev and data visualization</p>
                 <div>
                     <Divider/>
-                    <Button content='Resume'
+                    <Button content='Resume' style={{border: '0.5px solid gray'}}
                         icon={
                             {name: 'download'}
 
                         }/>
 
-                    <Button content='Cover Letter'
+                    <Button color='orange' content='Cover Letter' className='hoverButton'
                         icon={
                             {name: 'download'}
 

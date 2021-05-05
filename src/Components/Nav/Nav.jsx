@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
-import { motion } from "framer-motion"
+import React, {useState} from 'react'
 import K from '../../Assets/K.png'
 import ContactModal from '../Modal/ContactModal';
-import { Image } from 'semantic-ui-react'
+import {Image} from 'semantic-ui-react'
 
 const Nav = () => {
     const initialNavbar = {
@@ -16,40 +15,38 @@ const Nav = () => {
         zIndex: 15,
         transition: 'background 0.5s'
     }
+
     const stickyNavbar = {
         height: '7vh',
-        background: '#5c36a9',
-        color: 'white',
+        background: '#bbb6c4',
         position: 'sticky',
         top: 0,
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         zIndex: 15,
-        transition: 'background 0.5s'
+        transition: 'background 0.5s',
+        boxShadow: '0px 5px 10px -2px rgba(0,0,0,0.59)'
     }
     const [scroll, setScroll] = useState(0)
     window.onscroll = function () {
         setScroll(window.pageYOffset)
-        console.log(scroll)
     };
     const [open, setOpen] = useState(false);
-    const variants = {
-        visible: {
-            opacity: 1
-        },
-        hidden: {
-            opacity: 0
-        }
-    }
     return (
-        <nav variants={variants} style={scroll === 0 ? initialNavbar : stickyNavbar}>
+        <nav style={
+            scroll === 0 ? initialNavbar : stickyNavbar
+        }>
             <a href='#root'>
-                <Image src={K} style={{ width: '2.5em', paddingLeft: '1em' }} />
+                <Image src={K}
+                    style={
+                        {
+                            width: '1.8em',
+                            marginLeft: '3em'
+                        }
+                    }/>
             </a>
-            <motion.ul variants={variants}
-                initial='hidden'
-                animate='visible'>
+            <ul>
                 <li>
                     <a href="#about">About</a>
                 </li>
@@ -61,9 +58,9 @@ const Nav = () => {
                 </li>
 
                 <ContactModal open={open}
-                    setOpen={setOpen} />
+                    setOpen={setOpen}/>
 
-            </motion.ul>
+            </ul>
         </nav>
     )
 }
