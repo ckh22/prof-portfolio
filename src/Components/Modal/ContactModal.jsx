@@ -80,6 +80,7 @@ const ContactModal = ({open, setOpen}) => {
                     <Divider/>
                     <Form.TextArea name='message'
                         rows={5}
+                        required
                         placeholder='Your message...'
                         value={
                             contact.message !== null ? contact.message : ''

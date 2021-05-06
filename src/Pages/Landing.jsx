@@ -6,7 +6,7 @@ const Landing = () => {
     return (
         <section id='landing'>
             <Container text>
-                <Header content='Hello! My name is Kei' />
+                <Header content='Hi! My name is Kei Hartley' size='large' />
                 <p>I am a <strong>full-stack developer</strong></p>
                 <p>Specialized in User Centered Design & Front-end</p>
                 <div>

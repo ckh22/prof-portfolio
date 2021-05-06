@@ -28,6 +28,14 @@ const Nav = () => {
         zIndex: 15,
         boxShadow: '0px 5px 10px -2px rgba(0,0,0,0.59)'
     }
+    const textColor = {
+        white: {
+            color: 'white'
+        },
+        black: {
+            color: 'black'
+        }
+    }
     const [scroll, setScroll] = useState(0)
     window.onscroll = function () {
         setScroll(window.pageYOffset)
@@ -48,13 +56,13 @@ const Nav = () => {
             </a>
             <ul>
                 <li>
-                    <a href="#about">About</a>
+                    <a href="#about" style={scroll !== 0 ? textColor.white: textColor.black} >About</a>
                 </li>
                 <li>
-                    <a href="#skills">Skills</a>
+                    <a href="#skills" style={scroll !== 0 ? textColor.white: textColor.black}>Skills</a>
                 </li>
                 <li>
-                    <a href="#portfolio">Portfolio</a>
+                    <a href="#portfolio" style={scroll !== 0 ? textColor.white: textColor.black}>Portfolio</a>
                 </li>
                 <ContactModal open={open}
                     setOpen={setOpen}/>

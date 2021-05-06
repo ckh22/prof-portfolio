@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <section id='footer'>
             <div className="top">
-                    <Header content='Kei Hartley' size='huge' style={style}/>
+                    <Header content='Clifford Kei Hartley' size='huge' style={style}/>
             </div>
             <div className="middle">
                 <Icon name='instagram' link size='big'/>
@@ -17,7 +17,7 @@ const Footer = () => {
                 <Icon name='mail' link size='big'/>
             </div>
             <div className="bottom">
-                <Header content='Developed By Kei Hartley' style={style} />
+                <Header content='Developed By K.H.' style={style} />
             </div>
         </section>
     )

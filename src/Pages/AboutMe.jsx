@@ -14,7 +14,7 @@ const AboutMe = () => {
         <section id='about'>
             <Header content='About' textAlign='center'/>
             <Divider />
-            <Grid columns={2} divided>
+            <Grid columns={2}>
                 <Grid.Column textAlign='center'>
                     <Image src={osaka}
                         avatar
