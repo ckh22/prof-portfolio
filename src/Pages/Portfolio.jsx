@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import {
-    Button
-} from 'semantic-ui-react'
+import {Button} from 'semantic-ui-react'
 
 
 const Portfolio = () => {
@@ -35,7 +33,6 @@ const Portfolio = () => {
             {
                 active === 'web' && <div>web</div>
             }
-
         </section>
     )
 }

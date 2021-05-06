@@ -6,19 +6,20 @@ import {
     Grid,
     Container,
     List,
-    Segment
+    Divider
 } from "semantic-ui-react";
 
 const Skills = () => {
     return (
         <section id='skills'>
-            <Segment>
-                <Container text textAlign='center'>
-                    <Header content='Skills' as='h2'/>
-                </Container>
-            </Segment>
+            <Container text textAlign='center'>
+                <Header content='Skills' as='h2'/>
+            </Container>
+            <Divider />
             <Grid columns={3}
                 relaxed
+                verticalAlign='middle'
+                divided
                 textAlign='center'>
                 <Grid.Row centered>
                     <Grid.Column>

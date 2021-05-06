@@ -12,7 +12,6 @@ const ContactModal = ({open, setOpen}) => {
         position: ''
     }
     const [contact, setContact] = useState(skeleton)
-
     const handleChange = (e) => {
         let value = e.target.value;
         setContact({
@@ -20,13 +19,11 @@ const ContactModal = ({open, setOpen}) => {
             [e.target.name]: value
         })
     }
-
     const handleSubmit = () => {
         db.collection('forms').add(contact)
         setOpen(!open)
         setContact(skeleton)
     }
-
     return (
         <Modal onClose={
                 () => setOpen(false)

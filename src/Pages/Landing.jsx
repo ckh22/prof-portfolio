@@ -5,25 +5,20 @@ import teamLab from '../Assets/teamlab.png'
 const Landing = () => {
     return (
         <section id='landing'>
-
             <Container text>
                 <Header content='Hello! My name is Kei' />
-                <p>I'm Kei Hartley, a software engineer.</p>
-                <p>Specialized in web dev and data visualization</p>
+                <p>I am a <strong>full-stack developer</strong></p>
+                <p>Specialized in User Centered Design & Front-end</p>
                 <div>
                     <Divider/>
                     <Button content='Resume' style={{border: '0.5px solid gray'}}
                         icon={
                             {name: 'download'}
-
                         }/>
-
                     <Button color='orange' content='Cover Letter' className='hoverButton'
                         icon={
                             {name: 'download'}
-
                         }/>
-
                 </div>
             </Container>
             <Image src={teamLab}

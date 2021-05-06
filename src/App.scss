@@ -73,14 +73,21 @@ $secondary: #f6bbbb;
 #about {
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    .ui.very.padded.segment {
+        padding-right: 2em;
+    }
 }
 
 #skills {
     height: 100vh;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0 auto;
     padding: 2em;
 }
 

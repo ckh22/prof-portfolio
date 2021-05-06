@@ -7,6 +7,7 @@ const Nav = () => {
     const initialNavbar = {
         height: '7vh',
         background: 'white',
+        maxHeight: '75px',
         position: 'sticky',
         top: 0,
         display: 'flex',
@@ -15,9 +16,9 @@ const Nav = () => {
         zIndex: 15,
         transition: 'background 0.5s'
     }
-
     const stickyNavbar = {
         height: '7vh',
+        maxHeight: '75px',
         background: '#bbb6c4',
         position: 'sticky',
         top: 0,
@@ -33,7 +34,6 @@ const Nav = () => {
         setScroll(window.pageYOffset)
     };
     const [open, setOpen] = useState(false);
-
     return (
         <nav style={
             scroll === 0 ? initialNavbar : stickyNavbar
@@ -57,10 +57,8 @@ const Nav = () => {
                 <li>
                     <a href="#portfolio">Portfolio</a>
                 </li>
-
                 <ContactModal open={open}
                     setOpen={setOpen}/>
-
             </ul>
         </nav>
     )
