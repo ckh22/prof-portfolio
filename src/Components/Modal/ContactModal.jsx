@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {Modal, Button, Form, Divider} from 'semantic-ui-react'
+import {db} from '../../Firebase/db.js'
 
 const ContactModal = ({open, setOpen}) => {
     const skeleton = {
@@ -18,11 +19,10 @@ const ContactModal = ({open, setOpen}) => {
             ...contact,
             [e.target.name]: value
         })
-        console.log(contact)
     }
 
     const handleSubmit = () => {
-        console.log(contact)
+        db.collection('forms').add(contact)
         setOpen(!open)
         setContact(skeleton)
     }
@@ -47,8 +47,6 @@ const ContactModal = ({open, setOpen}) => {
                     onSubmit={
                         (e) => handleSubmit()
                     }
-                    netlify
-                    data-netlify="true"
                     name='contacts'>
                     <Form.Group widths={2}>
                         <Form.Input name='name' label='Name' placeholder='Your name...' required

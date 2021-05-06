@@ -33,6 +33,7 @@ const Nav = () => {
         setScroll(window.pageYOffset)
     };
     const [open, setOpen] = useState(false);
+
     return (
         <nav style={
             scroll === 0 ? initialNavbar : stickyNavbar
