@@ -96,12 +96,21 @@ $secondary: #f6bbbb;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    align-items: center;
+    position: relative;
+    .buttonGroup {
+        position: absolute;
+        top: 10%;
+    }
+    
+    .ui.centered.grid {
+        position: absolute;
+        top: 17%;
+    }
+    
 }
 
 #footer {
-    height: 40vh;
+    height: 20vh;
     background: $primary;
     display: flex;
     justify-content: space-between;

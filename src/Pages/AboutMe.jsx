@@ -14,7 +14,7 @@ const AboutMe = () => {
         <section id='about'>
             <Header content='About' textAlign='center'/>
             <Divider />
-            <Grid columns={2}>
+            <Grid columns={2} divided>
                 <Grid.Column textAlign='center'>
                     <Image src={osaka}
                         avatar
@@ -28,9 +28,6 @@ const AboutMe = () => {
                             <p>Human Centered Design & Engineering, University of Washington (UofW)</p>
                             <p>Expected Graduation Date, June 2022.</p>
                             <p>Full-stack Developer</p>
-                            <Container text fluid>
-                                At the UofW, I spent a majority of my time dedicated to adding more tools to my toolbox. 
-                            </Container>
                         </Segment>
                     </Container>
                 </Grid.Column>

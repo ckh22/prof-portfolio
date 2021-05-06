@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import {Button} from 'semantic-ui-react'
+import Data from '../Components/Tabs/Data'
+import User from '../Components/Tabs/User'
+import Web from '../Components/Tabs/Web'
 
 
 const Portfolio = () => {
-    const types = ['web', 'user', 'data']
+    const types = ['Web Development', 'UI & UX', 'Data Analytics']
     const [active, setActive] = useState(types[1])
     return (
         <section id='portfolio'>
-            <div> {
+            <div className='buttonGroup'> {
                 types.map(type => (
                     <Button content={type}
                         circular
@@ -20,20 +23,18 @@ const Portfolio = () => {
                         }
                         onClick={
                             () => setActive(type)
-                        } />
+                        }/>
                 ))
-            }
-            </div>
+            } </div>
             {
-                active === 'data' && <div>data</div>
-            }
+            active === 'Data Analytics' && <Data/>
+        }
             {
-                active === 'user' && <div>user</div>
-            }
+            active === 'UI & UX' && <User />
+        }
             {
-                active === 'web' && <div>web</div>
-            }
-        </section>
+            active === 'Web Development' && <Web />
+        } </section>
     )
 }
 

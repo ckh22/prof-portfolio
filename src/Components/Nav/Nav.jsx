@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import K from '../../Assets/K.png'
 import ContactModal from '../Modal/ContactModal';
 import {Image} from 'semantic-ui-react'
+import Icon2 from '../../Assets/Icon2.png'
 
 const Nav = () => {
     const initialNavbar = {
@@ -14,19 +15,17 @@ const Nav = () => {
         justifyContent: 'space-between',
         alignItems: 'center',
         zIndex: 15,
-        transition: 'background 0.5s'
     }
     const stickyNavbar = {
         height: '7vh',
         maxHeight: '75px',
-        background: '#bbb6c4',
+        background: '#9396e1',
         position: 'sticky',
         top: 0,
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         zIndex: 15,
-        transition: 'background 0.5s',
         boxShadow: '0px 5px 10px -2px rgba(0,0,0,0.59)'
     }
     const [scroll, setScroll] = useState(0)
@@ -39,7 +38,7 @@ const Nav = () => {
             scroll === 0 ? initialNavbar : stickyNavbar
         }>
             <a href='#root'>
-                <Image src={K}
+                <Image src={scroll === 0 ? K: Icon2}
                     style={
                         {
                             width: '1.8em',
