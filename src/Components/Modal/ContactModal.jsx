@@ -88,7 +88,8 @@ const ContactModal = ({open, setOpen}) => {
                         onChange={
                             (e) => handleChange(e)
                         }/>
-                    <Form.Button type='submit' content='Submit'/>
+                    <Form.Button type='submit' positive content='Submit'/>
+                    <Form.Button negative content='Cancel' onClick={() => setOpen(false)}/>
                 </Form>
             </Modal.Content>
         </Modal>
