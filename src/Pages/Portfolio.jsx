@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Button, Segment} from 'semantic-ui-react'
+import {Button} from 'semantic-ui-react'
 import Data from '../Components/Tabs/Data'
 import User from '../Components/Tabs/User'
 import Web from '../Components/Tabs/Web'
