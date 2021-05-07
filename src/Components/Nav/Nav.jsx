@@ -3,8 +3,10 @@ import K from '../../Assets/K.png'
 import ContactModal from '../Modal/ContactModal';
 import {Image} from 'semantic-ui-react'
 import Icon2 from '../../Assets/Icon2.png'
+import {motion} from 'framer-motion'
 
 const Nav = () => {
+
     const initialNavbar = {
         height: '7vh',
         background: 'white',
@@ -14,7 +16,7 @@ const Nav = () => {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        zIndex: 15,
+        zIndex: 15
     }
     const stickyNavbar = {
         height: '7vh',
@@ -42,11 +44,24 @@ const Nav = () => {
     };
     const [open, setOpen] = useState(false);
     return (
-        <nav style={
-            scroll === 0 ? initialNavbar : stickyNavbar
+        <motion.nav style={
+                scroll === 0 ? initialNavbar : stickyNavbar
+            }
+            initial={{y: -500, opacity: 0}}
+            animate={
+                {y: 0, opacity: 1}
+            }
+            transition={
+                {
+                    type: "spring",
+                    bounce: 0.25,
+                    duration: 0.25
+                }
         }>
             <a href='#root'>
-                <Image src={scroll === 0 ? K: Icon2}
+                <Image src={
+                        scroll === 0 ? K : Icon2
+                    }
                     style={
                         {
                             width: '1.8em',
@@ -56,18 +71,27 @@ const Nav = () => {
             </a>
             <ul>
                 <li>
-                    <a href="#about" style={scroll !== 0 ? textColor.white: textColor.black} >About</a>
+                    <a href="#about"
+                        style={
+                            scroll !== 0 ? textColor.white : textColor.black
+                    }>About</a>
                 </li>
                 <li>
-                    <a href="#skills" style={scroll !== 0 ? textColor.white: textColor.black}>Skills</a>
+                    <a href="#skills"
+                        style={
+                            scroll !== 0 ? textColor.white : textColor.black
+                    }>Skills</a>
                 </li>
                 <li>
-                    <a href="#portfolio" style={scroll !== 0 ? textColor.white: textColor.black}>Portfolio</a>
+                    <a href="#portfolio"
+                        style={
+                            scroll !== 0 ? textColor.white : textColor.black
+                    }>Portfolio</a>
                 </li>
                 <ContactModal open={open}
                     setOpen={setOpen}/>
             </ul>
-        </nav>
+        </motion.nav>
     )
 }
 
