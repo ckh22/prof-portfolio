@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Button} from 'semantic-ui-react'
+import {Button, Segment} from 'semantic-ui-react'
 import Data from '../Components/Tabs/Data'
 import User from '../Components/Tabs/User'
 import Web from '../Components/Tabs/Web'
@@ -27,15 +27,16 @@ const Portfolio = () => {
                         }/>
                 ))
             } </div>
-            {
-            active === 'Data Analytics' && <Data/>
-        }
-            {
-            active === 'UI & UX' && <User/>
-        }
-            {
-            active === 'Web Development' && <Web/>
-        } </section>
+           {
+                active === 'Data Analytics' && <Data/>
+            }
+                {
+                active === 'UI & UX' && <User/>
+            }
+                {
+                active === 'Web Development' && <Web/>
+            } 
+        </section>
     )
 }
 
