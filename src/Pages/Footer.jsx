@@ -9,15 +9,26 @@ const Footer = () => {
     return (
         <section id='footer'>
             <div className="top">
-                    <Header content='Clifford Kei Hartley' size='huge' style={style}/>
+                <Header content='Clifford Kei Hartley' size='huge'
+                    style={style}/>
             </div>
             <div className="middle">
-                <Icon name='instagram' link size='big'/>
-                <Icon name='github' link size='big'/>
-                <Icon name='mail' link size='big'/>
+                <a href='https://www.instagram.com/cliff_hartl/' target='_blank'>
+                    <Icon name='instagram' size='big' link/>
+                </a>
+                <a href='https://github.com/ckh22' target='_blank'>
+                    <Icon name='github' size='big' link/>
+                </a>
+                <a href='https://www.linkedin.com/in/clifford-hartley/' target='_blank'>
+                    <Icon name='linkedin' size='big' link/>
+                </a>
+                <a href='https://www.facebook.com/profile.php?id=100011729496904' target='_blank'>
+                    <Icon name='facebook' size='big' link />
+                </a>
             </div>
             <div className="bottom">
-                <Header content='Developed By K.H.' style={style} />
+                <Header content='Developed By K.H.'
+                    style={style}/>
             </div>
         </section>
     )
