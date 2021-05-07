@@ -10,12 +10,13 @@ const Portfolio = () => {
     const [active, setActive] = useState(types[1])
     return (
         <section id='portfolio'>
-            <div className='buttonGroup'> {
+            <div className='buttonGroup'>
+                {
                 types.map(type => (
                     <Button content={type}
                         circular
                         color={
-                            active === type ? 'purple' : null
+                            active === type && active === 'Web Development' ? 'teal' : active === type && active === 'UI & UX' ? 'purple' : active === type && active === 'Data Analytics' ? 'blue' : null
                         }
                         key={type}
                         active={
@@ -30,10 +31,10 @@ const Portfolio = () => {
             active === 'Data Analytics' && <Data/>
         }
             {
-            active === 'UI & UX' && <User />
+            active === 'UI & UX' && <User/>
         }
             {
-            active === 'Web Development' && <Web />
+            active === 'Web Development' && <Web/>
         } </section>
     )
 }

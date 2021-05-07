@@ -44,6 +44,7 @@ $secondary: #f6bbbb;
     flex-wrap: wrap;
     nav {
         font-weight: 600;
+        transition: ease-in-out 0.15s;
         ul {
             list-style-type: none;
             margin: 0;
