@@ -17,13 +17,11 @@ const Skills = () => {
             </Container>
             <Divider />
             <Grid columns={3}
-                relaxed
-                verticalAlign='middle'
-                divided
+                
                 textAlign='center'>
                 <Grid.Row centered>
                     <Grid.Column>
-                        <Card centered>
+                        <Card centered header>
                             <Card.Content textAlign='center'>
                                 <Card.Header content='Databases'/>
                                 <Icon name='database' size='huge' bordered/>

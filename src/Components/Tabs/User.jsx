@@ -27,7 +27,7 @@ const User = () => {
         <motion.div className='pj-container' initial="hidden" animate="visible" variants={list}>
             <Grid centered>
                 <Grid.Row columns={1}>
-                    <Grid.Column width={4}>
+                    <Grid.Column mobile='sixteen' largeScreen='four'>
                         <motion.div variants={item}>
                             <Popup
                             position='bottom center'
@@ -41,7 +41,7 @@ const User = () => {
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row columns={2} verticalAlign='middle'>
-                    <Grid.Column width={4}>
+                    <Grid.Column mobile='seven' largeScreen='four'>
                         <motion.div variants={item}>
                             <Popup
                                 position='bottom center'
@@ -53,7 +53,7 @@ const User = () => {
                             </Popup>
                         </motion.div>
                     </Grid.Column>
-                    <Grid.Column width={4}>
+                    <Grid.Column mobile='seven' largeScreen='four'>
                         <motion.div variants={item}>
                             <Popup
                                 position='bottom center'

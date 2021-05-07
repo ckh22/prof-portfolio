@@ -27,16 +27,15 @@ const Portfolio = () => {
                         }/>
                 ))
             } </div>
-           {
-                active === 'Data Analytics' && <Data/>
-            }
-                {
-                active === 'UI & UX' && <User/>
-            }
-                {
-                active === 'Web Development' && <Web/>
-            } 
-        </section>
+            {
+            active === 'Data Analytics' && <Data/>
+        }
+            {
+            active === 'UI & UX' && <User/>
+        }
+            {
+            active === 'Web Development' && <Web/>
+        } </section>
     )
 }
 

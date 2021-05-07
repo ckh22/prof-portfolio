@@ -8,14 +8,20 @@ import Landing from "./Pages/Landing";
 import Portfolio from "./Pages/Portfolio";
 import {BrowserRouter as Router} from 'react-router-dom'
 import Footer from "./Pages/Footer";
+import {useState} from 'react'
+import DrawerMenu from "./Components/Modal/DrawerMenu";
 
 function App() {
     const contextRef = createRef()
+    const [show, setShow] = useState(false)
     return (
         <Router>
             <div className="App"
                 ref={contextRef}>
-                <Nav contextRef={contextRef}/>
+                <DrawerMenu show={show} setShow={setShow} />
+                <Nav contextRef={contextRef}
+                    setShow={setShow}
+                    show={show}/>
                 <Landing/>
                 <AboutMe/>
                 <Skills/>

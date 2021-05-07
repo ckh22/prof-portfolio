@@ -22,12 +22,10 @@ const Landing = () => {
             y: 0,
             transition: {
                 staggerChildren: 0.5,
-                type: 'Spring',
+                type: 'Spring'
             }
         }
     }
-    
-
     const item = {
         hidden: {
             opacity: 0
@@ -36,7 +34,6 @@ const Landing = () => {
             opacity: 1
         }
     }
-
     const variants = {
         initial: {
             x: 100
@@ -52,11 +49,13 @@ const Landing = () => {
     }
     return (
         <section id='landing'>
-                <Container text fluid>
-                <motion.div className="framer-container" variants={container}
-    initial="hidden"
-    animate="show">
-                    <motion.div variants={item} className='text-container'>
+            <Container text fluid>
+                <motion.div className="framer-container"
+                    variants={container}
+                    initial="hidden"
+                    animate="show">
+                    <motion.div variants={item}
+                        className='text-container'>
                         <Header content="Hi! I'm Kei Hartley" size='large'/>
                         <Header content="Specialized in User-Centered Design and Full-stack Development"/>
                     </motion.div>
@@ -71,8 +70,8 @@ const Landing = () => {
                         <Button color='orange' content='Cover Letter' className='hoverButton' target='_blank'
                             href={coverLetter}/>
                     </motion.div>
-                    </motion.div>
-                </Container>
+                </motion.div>
+            </Container>
             <motion.div className="image-container"
                 variants={variants}
                 initial='initial'

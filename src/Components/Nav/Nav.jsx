@@ -1,12 +1,29 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import K from '../../Assets/K.png'
 import ContactModal from '../Modal/ContactModal';
-import {Image} from 'semantic-ui-react'
+import {Icon, Image} from 'semantic-ui-react'
 import Icon2 from '../../Assets/Icon2.png'
 import {motion} from 'framer-motion'
 
-const Nav = () => {
+function getWindowDimensions() {
+    const {innerWidth: width, innerHeight: height} = window;
+    return {width, height};
+}
 
+function useWindowDimensions() {
+    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+    useEffect(() => {
+        function handleResize() {
+            setWindowDimensions(getWindowDimensions());
+        }
+        window.addEventListener('resize', handleResize);
+        return() => window.removeEventListener('resize', handleResize);
+    }, []);
+    return windowDimensions;
+}
+
+const Nav = ({setShow, show}) => {
+    const {width} = useWindowDimensions();
     const initialNavbar = {
         height: '7vh',
         background: 'white',
@@ -32,7 +49,7 @@ const Nav = () => {
     }
     const textColor = {
         white: {
-            color: 'white'
+            color: '#e7edec'
         },
         black: {
             color: 'black'
@@ -47,9 +64,17 @@ const Nav = () => {
         <motion.nav style={
                 scroll === 0 ? initialNavbar : stickyNavbar
             }
-            initial={{y: -500, opacity: 0}}
+            initial={
+                {
+                    y: -500,
+                    opacity: 0
+                }
+            }
             animate={
-                {y: 0, opacity: 1}
+                {
+                    y: 0,
+                    opacity: 1
+                }
             }
             transition={
                 {
@@ -69,7 +94,7 @@ const Nav = () => {
                         }
                     }/>
             </a>
-            <ul>
+            {width > 600 ? <ul>
                 <li>
                     <a href="#about"
                         style={
@@ -90,7 +115,7 @@ const Nav = () => {
                 </li>
                 <ContactModal open={open}
                     setOpen={setOpen}/>
-            </ul>
+            </ul> : <Icon name='bars' size='big' style={{paddingRight: '2em'}} link onClick={() => setShow(!show)} />}
         </motion.nav>
     )
 }

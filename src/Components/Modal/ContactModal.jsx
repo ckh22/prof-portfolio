@@ -32,13 +32,13 @@ const ContactModal = ({open, setOpen}) => {
                 () => setOpen(true)
             }
             trigger={
-                <Button>Contact</Button>
+                <Button icon='paper plane' content='Send A Message!' />
             }
             open={open}
             closeIcon
             dimmer='blurring'
             size='large'>
-            <Modal.Header>Select a Photo</Modal.Header>
+            <Modal.Header>Contact</Modal.Header>
             <Modal.Content>
                 <Form unstackable error
                     onSubmit={
@@ -88,8 +88,14 @@ const ContactModal = ({open, setOpen}) => {
                         onChange={
                             (e) => handleChange(e)
                         }/>
-                    <Form.Button type='submit' positive content='Submit'/>
-                    <Form.Button negative content='Cancel' onClick={() => setOpen(false)}/>
+                    <Button.Group floated='right'>
+
+                        <Form.Button basic content='Cancel'
+                            onClick={
+                                () => setOpen(false)
+                            }/>
+                        <Form.Button type='submit' positive content='Submit'/>
+                    </Button.Group>
                 </Form>
             </Modal.Content>
         </Modal>

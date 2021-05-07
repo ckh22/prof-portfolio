@@ -4,7 +4,7 @@ import {Header, Icon} from 'semantic-ui-react'
 const Footer = () => {
     const style = {
         padding: '1em',
-        color: '#c2a79f'
+        color: '#e7edec'
     }
     return (
         <section id='footer'>
