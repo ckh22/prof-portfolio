@@ -15,7 +15,6 @@ const Web = () => {
             opacity: 0
         }
     };
-
     const item = {
         visible: {
             opacity: 1,

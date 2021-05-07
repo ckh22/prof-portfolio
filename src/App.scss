@@ -72,7 +72,7 @@ $secondary: #f6bbbb;
 }
 
 #landing {
-    height: 93vh;
+    min-height: 93vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -85,7 +85,7 @@ $secondary: #f6bbbb;
     }
 }
 #about {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,7 +96,7 @@ $secondary: #f6bbbb;
 }
 
 #skills {
-    height: 100vh;
+    min-height: 100vh;
     max-width: 1000px;
     display: flex;
     flex-direction: column;
@@ -106,20 +106,12 @@ $secondary: #f6bbbb;
 }
 
 #portfolio {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    .buttonGroup {
-        position: absolute;
-        top: 10%;
-    }
-
-    .pj-container {
-        position: absolute;
-        top: 17%;
-    }
+    
 }
 
 #footer {

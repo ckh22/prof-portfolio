@@ -89,7 +89,6 @@ const ContactModal = ({open, setOpen}) => {
                             (e) => handleChange(e)
                         }/>
                     <Button.Group floated='right'>
-
                         <Form.Button basic content='Cancel'
                             onClick={
                                 () => setOpen(false)

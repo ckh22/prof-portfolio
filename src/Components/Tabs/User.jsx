@@ -9,7 +9,6 @@ import { motion } from "framer-motion";
 
 
 const User = () => {
-
     const list = {
         visible: {
             opacity: 1,
@@ -22,7 +21,6 @@ const User = () => {
         visible: { opacity: 1, x: 0 },
         hidden: { opacity: 0, x: -100 }
     };
-
     return (
         <motion.div className='pj-container' initial="hidden" animate="visible" variants={list}>
             <Grid centered>

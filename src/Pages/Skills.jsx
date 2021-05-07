@@ -16,8 +16,7 @@ const Skills = () => {
                 <Header content='Skills' as='h2'/>
             </Container>
             <Divider />
-            <Grid columns={3}
-                
+            <Grid columns={3} stackable
                 textAlign='center'>
                 <Grid.Row centered>
                     <Grid.Column>
