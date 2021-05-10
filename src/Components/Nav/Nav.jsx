@@ -94,7 +94,8 @@ const Nav = ({setShow, show}) => {
                         }
                     }/>
             </a>
-            {width > 600 ? <ul>
+            {
+            width > 600 ? <ul>
                 <li>
                     <a href="#about"
                         style={
@@ -112,11 +113,22 @@ const Nav = ({setShow, show}) => {
                         style={
                             scroll !== 0 ? textColor.white : textColor.black
                     }>Portfolio</a>
+                    <a href="https://blogger.keihartley.com/"
+                        style={
+                            scroll !== 0 ? textColor.white : textColor.black
+                    }>Blogger</a>
                 </li>
                 <ContactModal open={open}
                     setOpen={setOpen}/>
-            </ul> : <Icon name='bars' size='big' style={{paddingRight: '2em'}} link onClick={() => setShow(!show)} />}
-        </motion.nav>
+            </ul> : <Icon name='bars' size='big'
+                style={
+                    {paddingRight: '2em'}
+                }
+                link
+                onClick={
+                    () => setShow(!show)
+                }/>
+        } </motion.nav>
     )
 }
 
