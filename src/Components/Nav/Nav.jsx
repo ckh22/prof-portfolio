@@ -113,6 +113,8 @@ const Nav = ({setShow, show}) => {
                         style={
                             scroll !== 0 ? textColor.white : textColor.black
                     }>Portfolio</a>
+                </li>
+                <li>
                     <a href="https://blogger.keihartley.com/"
                         style={
                             scroll !== 0 ? textColor.white : textColor.black
