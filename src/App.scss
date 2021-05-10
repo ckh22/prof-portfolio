@@ -115,7 +115,7 @@ $secondary: #f6bbbb;
 }
 
 #footer {
-    height: 20vh;
+    min-height: 20vh;
     background: $primary;
     display: flex;
     justify-content: space-between;
