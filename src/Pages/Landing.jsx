@@ -57,11 +57,11 @@ const Landing = () => {
                     animate="show">
                     <motion.div variants={item}
                         className='text-container'>
-                        <Header content='Hello! 👋'/>
-                        <Header content="I'm Kei Hartley"/>
+                        <Header content='Hello! 👋' size='large'/>
+                        <Header content="I'm Kei Hartley" size='large' />
                         <hr />
-                        <Header content="Specialized in User-Centered Design and Full-stack Development"/>
-                        <Header content='Based in Seattle, WA'/>
+                        <Header content="Specialized in User-Centered Design and Full-stack Development" sub size='huge' />
+                        <Header content='Based in Seattle, WA' sub size='huge' />
                     </motion.div>
                     <motion.div variants={item}>
                         <Divider/>
@@ -71,7 +71,7 @@ const Landing = () => {
                             }
                             target='_blank'
                             href={resume}/>
-                        <Button content='Cover Letter' className='hoverButton' target='_blank'
+                        <Button content='Cover Letter' color='teal' className='hoverButton' target='_blank'
                             href={coverLetter}/>
                     </motion.div>
                 </motion.div>
