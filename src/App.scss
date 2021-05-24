@@ -33,7 +33,7 @@ html::-webkit-scrollbar-thumb:active {
     border-radius: 10px;
 }
 
-$primary: #5c36a9;
+$primary: rgb(92, 54, 169);
 $primary2: #9396e1;
 $secondary: #f6bbbb;
 
@@ -76,12 +76,23 @@ $secondary: #f6bbbb;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    .buildings {
+        height: 15%;
+        width: 100%;
+        min-width: 1000px;
+        position: absolute;
+        bottom: 0;
+    }
     .ui.text.container {
         padding: 1em;
     }
 
     @media only screen and (max-width: 600px) {
         flex-direction: column;
+        .buildings {
+            display: none;
+        }
     }
 }
 #about {
@@ -96,13 +107,35 @@ $secondary: #f6bbbb;
 }
 
 #skills {
-    min-height: 100vh;
-    max-width: 1000px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 2em;
+    position: relative;
+    width: 100%;
+    .corner {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+    }
+    .grid-container {
+        min-height: 100vh;
+        max-width: 1000px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 2em;
+        position: relative;
+        .Center {
+            background: $primary;
+            color: white;
+            padding: 4em;
+            box-shadow: 10px 10px 5px 1px rgba(92, 54, 169, 0.349);
+            div {
+                color: white;
+            }
+        }
+        .Outer {
+            box-shadow: 10px 10px 5px 1px rgba(92, 54, 169, 0.349);
+        }
+    }
 }
 
 #portfolio {
@@ -111,7 +144,6 @@ $secondary: #f6bbbb;
     flex-direction: column;
     align-items: center;
     position: relative;
-    
 }
 
 #footer {

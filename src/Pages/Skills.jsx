@@ -1,97 +1,142 @@
 import React from 'react'
 import {
     Icon,
-    Card,
     Header,
     Grid,
-    Container,
     List,
-    Divider
+    Divider,
+    Image,
+    Segment,
+    Container
 } from "semantic-ui-react";
+import corner from '../Assets/corner.png'
+import skills from '../Assets/skills.png'
 
 const Skills = () => {
     return (
         <section id='skills'>
-            <Container text textAlign='center'>
-                <Header content='Skills' as='h2'/>
-            </Container>
-            <Divider />
-            <Grid columns={3} stackable
-                textAlign='center'>
-                <Grid.Row centered>
-                    <Grid.Column>
-                        <Card centered header>
-                            <Card.Content textAlign='center'>
-                                <Card.Header content='Databases'/>
-                                <Icon name='database' size='huge' bordered/>
-                                <Card.Meta content='MS Azure, MongoDB, Firebase'/>
-                                <Card.Description content='Implemented numerous NoSQL and SQL databases for personal, university, and research projects. '/>
-                            </Card.Content>
-                        </Card>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <Card centered>
-                            <Card.Content textAlign='center'>
-                                <Card.Header content='Web Dev'/>
-                                <Icon name='computer' size='huge' bordered/>
-                                <Card.Meta content='React, Angular'/>
-                                <Card.Description content='Created many websites using React or Angular and have experience prototyping websites in Figma and Adobe XD. '/>
-                            </Card.Content>
-                        </Card>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <Card centered>
-                            <Card.Content textAlign='center'>
-                                <Card.Header content='Languages'/>
-                                <Icon name='code' size='huge' bordered/>
-                                <Card.Meta content='JavaScript, Java, Python, HTML/CSS, SQL'/>
-                                <Card.Description>
+            <Image src={corner}
+                className='corner'/>
+            <div className="grid-container">
+                <div className="flex-container"
+                    style={
+                        {
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            alignItems: 'center'
+                        }
+                }>
+                    <Header content='Skills' as='h2'/>
+                    <Image src={skills}
+                        size='small'/>
+                </div>
+                <Divider/>
+                <Grid columns={3}
+                    stackable
+                    textAlign='center'
+                    verticalAlign='middle'>
+                    <Grid.Row centered>
+                        <Grid.Column>
+                            <Segment className='Outer'>
+                                <Container textAlign='center'>
+                                    <Header content='Databases'/>
+                                    <Icon name='database' size='huge'/>
+                                    <List animated>
+                                        <List.Item>
+                                            +2 years in NoSQL (MongoDB, Firebase)
+                                        </List.Item>
+                                        <List.Item>
+                                            +1 year in SQL (MS Azure, SQLite)
+                                        </List.Item>
+                                    </List>
+                                </Container>
+                            </Segment>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Segment className='Center' >
+                                <Container textAlign='center'>
+                                    <Header content='Web Dev'/>
+                                    <Icon name='computer' size='huge'/>
+                                    <List animated
+                                        style={
+                                            {color: 'white'}
+                                    }>
+                                        <List.Item>+2 years in React
+                                        </List.Item>
+                                        <List.Item>+2 years in HTML/CSS and SCSS
+                                        </List.Item>
+                                    </List>
+                                </Container>
+                            </Segment>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Segment className='Outer'>
+                                <Container textAlign='center'>
+                                    <Header content='Languages'/>
+                                    <Icon name='code' size='huge'/>
                                     <List animated>
                                         <List.Item>+3 years in Java
                                         </List.Item>
                                         <List.Item>+2 years in JavaScript
                                         </List.Item>
-                                        <List.Item>+1 years in Python
+                                        <List.Item>+1 year in Python
                                         </List.Item>
                                     </List>
-                                </Card.Description>
-                            </Card.Content>
-                        </Card>
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row centered>
-                    <Grid.Column>
-                        <Card centered>
-                            <Card.Content textAlign='center'>
-                                <Card.Header content='Design'/>
-                                <Icon name='paint brush' size='huge' bordered/>
-                                <Card.Meta content='Figma'/>
-                                <Card.Description content='Experience in conducting user research, producing personas and storyboards, flushing out the information archetecture, creating wireframes and lofi/hifi prototypes.'/>
-                            </Card.Content>
-                        </Card>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <Card centered>
-                            <Card.Content textAlign='center'>
-                                <Card.Header content='Data Science'/>
-                                <Icon name='area graph' size='huge' bordered/>
-                                <Card.Meta content='R or Python (ggplot2 or Plotly)'/>
-                                <Card.Description content='Proficient in retrieving data from an API, data scrubbing, analysis of data, and producing visual illustrations to support the analysis.'/>
-                            </Card.Content>
-                        </Card>
-                    </Grid.Column>
-                    <Grid.Column>
-                        <Card centered>
-                            <Card.Content textAlign='center'>
-                                <Card.Header content='Node.js Tools'/>
-                                <Icon name='wrench' size='huge' bordered/>
-                                <Card.Meta content='Libraries accessed from Node.js'/>
-                                <Card.Description content='Experience in implementing a large range of Node.js libraries: Including Redux, Bootstrap, Material-UI, Express, Apollo-server, and Axios, and more.'/>
-                            </Card.Content>
-                        </Card>
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
+                                </Container>
+                            </Segment>
+                        </Grid.Column>
+                    </Grid.Row>
+                    <Grid.Row centered>
+                        <Grid.Column>
+                            <Segment className='Outer'>
+                                <Container textAlign='center'>
+                                    <Header content='Design' />
+                                    <Icon name='paint brush' size='huge'/>
+                                    <List animated>
+                                        <List.Item>+1 year in Figma
+                                        </List.Item>
+                                        <List.Item>+1 year in User Research
+                                        </List.Item>
+                                        <List.Item>+1 year in Prototyping
+                                        </List.Item>
+                                    </List>
+                                </Container>
+                            </Segment>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Segment className='Center'>
+                                <Container textAlign='center'>
+                                    <Header content='Data Science'/>
+                                    <Icon name='area graph' size='huge'/>
+                                    <List animated>
+                                        <List.Item>+1 year in R
+                                        </List.Item>
+                                        <List.Item>+1 year in Plotly & Matplotlib
+                                        </List.Item>
+                                    </List>
+                                </Container>
+                            </Segment>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Segment className='Outer'>
+                                <Container textAlign='center'>
+                                    <Header content='Node.js Tools'/>
+                                    <Icon name='wrench' size='huge'/>
+                                    <List animated>
+                                        <List.Item>
+                                            +2 years using Git Terminal
+                                        </List.Item>
+                                        <List.Item>
+                                            +2 years of Redux, Express, and Axios
+                                        </List.Item>
+                                    </List>
+                                </Container>
+                            </Segment>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </div>
         </section>
     )
 }

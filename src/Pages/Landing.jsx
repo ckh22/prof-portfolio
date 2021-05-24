@@ -10,6 +10,7 @@ import teamLab from '../Assets/teamlab.png'
 import coverLetter from '../Assets/CL.pdf'
 import resume from '../Assets/resume.pdf'
 import {motion} from 'framer-motion'
+import Buildings from '../Assets/buildings.png'
 
 const Landing = () => {
     const container = {
@@ -56,8 +57,11 @@ const Landing = () => {
                     animate="show">
                     <motion.div variants={item}
                         className='text-container'>
-                        <Header content="Hi! I'm Kei Hartley" size='large'/>
+                        <Header content='Hello! 👋'/>
+                        <Header content="I'm Kei Hartley"/>
+                        <hr />
                         <Header content="Specialized in User-Centered Design and Full-stack Development"/>
+                        <Header content='Based in Seattle, WA'/>
                     </motion.div>
                     <motion.div variants={item}>
                         <Divider/>
@@ -67,7 +71,7 @@ const Landing = () => {
                             }
                             target='_blank'
                             href={resume}/>
-                        <Button color='orange' content='Cover Letter' className='hoverButton' target='_blank'
+                        <Button content='Cover Letter' className='hoverButton' target='_blank'
                             href={coverLetter}/>
                     </motion.div>
                 </motion.div>
@@ -91,6 +95,8 @@ const Landing = () => {
                     }
                     alt='teamLab'/>
             </motion.div>
+            <Image src={Buildings}
+                className='buildings'/>
         </section>
     )
 }
