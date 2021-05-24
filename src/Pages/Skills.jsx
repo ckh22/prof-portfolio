@@ -41,7 +41,7 @@ const Skills = () => {
                             <Segment className='Outer'>
                                 <Container textAlign='center'>
                                     <Header content='Databases'/>
-                                    <Icon name='database' size='huge'/>
+                                    <Icon name='database' size='huge' color='purple'/>
                                     <List animated>
                                         <List.Item>
                                             +2 years in NoSQL (MongoDB, Firebase)
@@ -74,7 +74,7 @@ const Skills = () => {
                             <Segment className='Outer'>
                                 <Container textAlign='center'>
                                     <Header content='Languages'/>
-                                    <Icon name='code' size='huge'/>
+                                    <Icon name='code' size='huge' color='purple'/>
                                     <List animated>
                                         <List.Item>+3 years in Java
                                         </List.Item>
@@ -92,7 +92,7 @@ const Skills = () => {
                             <Segment className='Outer'>
                                 <Container textAlign='center'>
                                     <Header content='Design' />
-                                    <Icon name='paint brush' size='huge'/>
+                                    <Icon name='paint brush' size='huge' color='purple'/>
                                     <List animated>
                                         <List.Item>+1 year in Figma
                                         </List.Item>
@@ -122,7 +122,7 @@ const Skills = () => {
                             <Segment className='Outer'>
                                 <Container textAlign='center'>
                                     <Header content='Node.js Tools'/>
-                                    <Icon name='wrench' size='huge'/>
+                                    <Icon name='wrench' size='huge' color='purple'/>
                                     <List animated>
                                         <List.Item>
                                             +2 years using Git Terminal
