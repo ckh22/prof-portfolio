@@ -46,6 +46,11 @@ $secondary: #f6bbbb;
     }
 }
 
+.pj-container {
+    margin-bottom: 3em;
+}
+
+
 .App {
     width: 100vw;
     display: flex;
@@ -134,6 +139,11 @@ $secondary: #f6bbbb;
         }
         .Outer {
             box-shadow: 10px 10px 5px 1px rgba(92, 54, 169, 0.349);
+        }
+    }
+    @media only screen and (max-width: 750px) {
+        .corner {
+            display: none;
         }
     }
 }

@@ -21,6 +21,8 @@ const User = () => {
         visible: { opacity: 1, x: 0 },
         hidden: { opacity: 0, x: -100 }
     };
+
+    
     return (
         <motion.div className='pj-container' initial="hidden" animate="visible" variants={list}>
             <Grid centered>
@@ -33,7 +35,7 @@ const User = () => {
                                 <Card link centered image={<Image src={Birdio} style={{height: '160px'}}/>} header='Birdio Project' description='Final Project for HCDE 308: Intro to User Centered Design' color='purple' href='https://birdiohcde.wixsite.com/birdio/' target='_blank' />
                             }
                         >
-                            <Popup.Header>View PDF</Popup.Header>
+                            <Popup.Header><Icon name='globe' />Go to Website</Popup.Header>
                             </Popup>
                         </motion.div>
                     </Grid.Column>
@@ -59,7 +61,7 @@ const User = () => {
                                     <Card link centered image={<Image src={Michelin} style={{height: '160px'}} />} header='UI Report: Michelin Group' description='Large Project for HCDE___: ____ ____ ___ and reviewed whether the website provided a good experience to the user.' href={michelinPDF} color='purple' target='_blank'  />
                                 }
                             >
-                                <Popup.Header>View PDF</Popup.Header>
+                                <Popup.Header><Icon name='file pdf'/>View PDF</Popup.Header>
                             </Popup>
                         </motion.div>
                     </Grid.Column>
