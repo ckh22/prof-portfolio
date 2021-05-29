@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Button, Grid, Icon, Popup} from 'semantic-ui-react'
+import {Button, Container, Grid, Icon, Popup} from 'semantic-ui-react'
 import Data from '../Components/Tabs/Data'
 import User from '../Components/Tabs/User'
 import Web from '../Components/Tabs/Web'
@@ -53,7 +53,10 @@ const Portfolio = () => {
                 } 
                 </Grid.Row>
             </Grid>
-            <Popup trigger={<Icon name='arrow alternate circle up outline' size='huge' style={{color: 'gray'}} link onClick={() => scrollToTop()}/>} content='Scroll to top' position='top center'  />
+            <div className="scrollup">
+            Scroll To Top
+            <Icon name='arrow alternate circle up outline' size='huge' style={{color: 'gray'}} link onClick={() => scrollToTop()}/>
+            </div>
         </section>
     )
 }
