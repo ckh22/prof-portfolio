@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Button, Container, Grid, Icon, Popup} from 'semantic-ui-react'
+import {Button, Grid, Icon} from 'semantic-ui-react'
 import Data from '../Components/Tabs/Data'
 import User from '../Components/Tabs/User'
 import Web from '../Components/Tabs/Web'
