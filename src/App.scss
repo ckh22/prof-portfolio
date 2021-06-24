@@ -5,13 +5,16 @@
     font-family: "Montserrat", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     width: 100vw;
     min-width: 100vw;
     max-width: 100vw;
     overflow-x: hidden;
     overflow-y: auto;
-    scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
