@@ -10,25 +10,29 @@ import {BrowserRouter as Router} from 'react-router-dom'
 import Footer from "./Pages/Footer";
 import {useState} from 'react'
 import DrawerMenu from "./Components/Modal/DrawerMenu";
+import { Icon } from "semantic-ui-react";
 
 function App() {
     const contextRef = createRef()
     const [show, setShow] = useState(false)
     return (
-        <Router>
-            <div className="App"
-                ref={contextRef}>
-                <DrawerMenu show={show} setShow={setShow} />
-                <Nav contextRef={contextRef}
-                    setShow={setShow}
-                    show={show}/>
-                <Landing/>
-                <AboutMe/>
-                <Skills/>
-                <Portfolio/>
-                <Footer/>
-            </div>
-        </Router>
+        <div>
+            Construction underway!! <Icon name='wrench' />
+        </div>
+        // <Router>
+        //     <div className="App"
+        //         ref={contextRef}>
+        //         <DrawerMenu show={show} setShow={setShow} />
+        //         <Nav contextRef={contextRef}
+        //             setShow={setShow}
+        //             show={show}/>
+        //         <Landing/>
+        //         <AboutMe/>
+        //         <Skills/>
+        //         <Portfolio/>
+        //         <Footer/>
+        //     </div>
+        // </Router>
     );
 }
 

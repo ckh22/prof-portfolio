@@ -63,7 +63,7 @@ const AboutMe = () => {
                             animate='slideIn'>
                             <Segment padded='very'>
                                 <Header content='About' textAlign='center' size='huge'/>
-                                <hr/>
+                                <Divider />
                                 <Header content='Kei Hartley'
                                     subheader={
                                         <Header
@@ -86,7 +86,7 @@ const AboutMe = () => {
                                     <Grid.Row>
                                         <Grid.Column>
                                             <Header content='Deans List Quarters' textAlign='center'/>
-                                            <hr/>
+                                            <Divider />
                                             <List>
                                                 <List.Item>
                                                     SP 2020
@@ -101,7 +101,7 @@ const AboutMe = () => {
                                         </Grid.Column>
                                         <Grid.Column>
                                             <Header content='Awards' textAlign='center'/>
-                                            <hr/>
+                                            <Divider />
                                             <List>
                                                 <List.Item>
                                                     J.H. & Frances Sargent Scholarship
@@ -127,7 +127,7 @@ const AboutMe = () => {
                                     <Grid.Row>
                                         <Grid.Column>
                                             <Header content='Socials' textAlign='center'/>
-                                            <hr/>
+                                            <Divider />
                                             <Container textAlign='center'>
                                                 <a href="https://github.com/ckh22" target='_blank' rel="noreferrer">
                                                     <Icon name='github' size='big'/></a>
@@ -141,19 +141,23 @@ const AboutMe = () => {
                                         </Grid.Column>
                                         <Grid.Column>
                                             <Header content='Previous Work' textAlign='center'/>
-                                            <hr/>
+                                            <Divider />
                                             Software Engineering Internship
                                             <br />
                                             Company: VillaVox
                                             <br />
                                             <a href="https://villavox.com/" target='_blank' rel="noreferrer">Link</a>
-                                            <Divider hidden />
                                             Research Assistant
                                             <br />
                                             Company: Sensors, Energy, and Automation Laboratory (SEAL)
                                             <br />
                                             <a href="https://uwseal.org/" target='_blank' rel="noreferrer">Link</a>
-                                        </Grid.Column>
+                                            
+                                            Software Engineering Internship
+                                            <br />
+                                            Company: VillaVox
+                                            <br />
+                                            <a href="https://villavox.com/" target='_blank' rel="noreferrer">Link</a>                                        </Grid.Column>
                                     </Grid.Row>
                                 </Grid>
                             </Segment>
