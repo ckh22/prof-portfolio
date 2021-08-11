@@ -5,47 +5,47 @@ import { Icon, Image } from 'semantic-ui-react'
 // import Icon2 from '../../Assets/Icon2.png'
 import { motion } from 'framer-motion'
 
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window
-  return { width, height }
-}
+// function getWindowDimensions() {
+//   const { innerWidth: width, innerHeight: height } = window
+//   return { width, height }
+// }
 
-function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions(),
-  )
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions())
-    }
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-  return windowDimensions
-}
+// function useWindowDimensions() {
+//   const [windowDimensions, setWindowDimensions] = useState(
+//     getWindowDimensions(),
+//   )
+//   useEffect(() => {
+//     function handleResize() {
+//       setWindowDimensions(getWindowDimensions())
+//     }
+//     window.addEventListener('resize', handleResize)
+//     return () => window.removeEventListener('resize', handleResize)
+//   }, [])
+//   return windowDimensions
+// }
 
 const Nav = ({ setShow, show }) => {
 
-  const [scrollState, setScrollState] = useState("top")
+  // const [scrollState, setScrollState] = useState("top")
 
-  let listener = null
-  useEffect(() => {
-    listener = document.addEventListener("scroll", e => {
-      var scrolled = document.scrollingElement.scrollTop
-      if (scrolled >= 120) {
-        if (scrollState !== "amir") {
-          setScrollState("amir")
-        }
-      } else {
-        if (scrollState !== "top") {
-          setScrollState("top")
-        }
-      }
-    })
-    return () => {
-      document.removeEventListener("scroll", listener)
-    }
-  }, [scrollState])
+  // let listener = null
+  // useEffect(() => {
+  //   listener = document.addEventListener("scroll", e => {
+  //     var scrolled = document.scrollingElement.scrollTop
+  //     if (scrolled >= 120) {
+  //       if (scrollState !== "amir") {
+  //         setScrollState("amir")
+  //       }
+  //     } else {
+  //       if (scrollState !== "top") {
+  //         setScrollState("top")
+  //       }
+  //     }
+  //   })
+  //   return () => {
+  //     document.removeEventListener("scroll", listener)
+  //   }
+  // }, [scrollState])
 
   const { width } = useWindowDimensions()
   const [open, setOpen] = useState(false)
